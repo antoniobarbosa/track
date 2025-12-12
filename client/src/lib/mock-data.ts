@@ -3,7 +3,7 @@ import bambooImg from '@assets/stock_images/serene_bamboo_forest_38289e3e.jpg';
 import kyotoNightImg from '@assets/stock_images/cinematic_shot_of_ky_e5492d1c.jpg';
 import travelerImg from '@assets/stock_images/modern_traveler_look_cd8c6f01.jpg';
 
-export type Category = 'culture' | 'food' | 'nature' | 'shopping' | 'stay';
+export type Category = 'culture' | 'food' | 'nature' | 'shopping' | 'stay' | 'event';
 export type Difficulty = 'easy' | 'moderate' | 'challenging';
 
 export interface Location {
@@ -38,7 +38,7 @@ export const MOCK_TRIP = {
       lng: 135.7727,
       category: 'culture',
       difficulty: 'moderate',
-      photos: [fushimiImg],
+      photos: [(fushimiImg as any).src || fushimiImg],
       time: '08:00 AM',
       day: 1,
       rating: 4.9
@@ -51,7 +51,7 @@ export const MOCK_TRIP = {
       lng: 135.6670,
       category: 'nature',
       difficulty: 'easy',
-      photos: [bambooImg],
+      photos: [bambooImg.src || bambooImg],
       time: '11:30 AM',
       day: 1,
       rating: 4.8
@@ -64,7 +64,7 @@ export const MOCK_TRIP = {
       lng: 135.7716,
       category: 'food',
       difficulty: 'easy',
-      photos: [kyotoNightImg],
+      photos: [kyotoNightImg.src || kyotoNightImg],
       time: '07:00 PM',
       day: 1,
       rating: 4.7
@@ -77,7 +77,7 @@ export const MOCK_TRIP = {
       lng: 135.7292,
       category: 'culture',
       difficulty: 'easy',
-      photos: [travelerImg],
+      photos: [travelerImg.src || travelerImg],
       time: '10:00 AM',
       day: 2,
       rating: 4.9
@@ -90,7 +90,7 @@ export const MOCK_TRIP = {
       lng: 135.7633,
       category: 'food',
       difficulty: 'easy',
-      photos: [fushimiImg], 
+      photos: [(fushimiImg as any).src || fushimiImg], 
       time: '01:00 PM',
       day: 2,
       rating: 4.6
